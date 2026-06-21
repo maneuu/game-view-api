@@ -1,42 +1,59 @@
-### Listar jogadores
-GET http://localhost:8080/jogadores
+### Listar todos os jogadores
+
+GET http://localhost:8080/jogador/all
 
 ###
 
 ### Buscar jogador por ID
-GET http://localhost:8080/jogadores/1
 
-###                                                                         
+GET http://localhost:8080/jogador/get/2
+
+###
 
 ### Criar jogador
-POST http://localhost:8080/jogadores
+
+POST http://localhost:8080/jogador/create
 Content-Type: application/json
 
 {
-    "nomeUsuario": "Emanoel",
-    "email": "emanoel@email.com",
-    "senha": "123456",
-    "nivel": 1,
-    "experiencia": 0,
-    "pontuacao": 0
+"nomeUsuario": "Emanoel2",
+"email": "[eemanoel@email.com](mailto:eemanoel@email.com)",
+"senha": "123456",
+"nivel": 1,
+"experiencia": 0,
+"pontuacao": 0
 }
 
 ###
 
-### Atualizar jogador
-PUT http://localhost:8080/jogadores/1
+### Atualizar jogador completo
+
+PUT http://localhost:8080/jogador/update/1
 Content-Type: application/json
 
 {
-    "nomeUsuario": "Emanoel Atualizado",
-    "email": "emanoel@email.com",
-    "senha": "123456",
-    "nivel": 2,
-    "experiencia": 150,
-    "pontuacao": 500
+"nomeUsuario": "Emanoel Atualizado",
+"email": "[emanoel@email.com](mailto:emanoel@email.com)",
+"senha": "novaSenha123",
+"nivel": 5,
+"experiencia": 1500,
+"pontuacao": 2500
+}
+
+###
+
+### Atualização parcial
+
+PATCH http://localhost:8080/jogador/patch/7
+Content-Type: application/json
+
+{
+"nivel": 10,
+"pontuacao": 5000
 }
 
 ###
 
 ### Remover jogador
-DELETE http://localhost:8080/jogadores/1
+
+DELETE http://localhost:8080/jogador/delete/5
