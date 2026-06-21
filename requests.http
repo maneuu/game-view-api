@@ -1,0 +1,42 @@
+### Listar jogadores
+GET http://localhost:8080/jogadores
+
+###
+
+### Buscar jogador por ID
+GET http://localhost:8080/jogadores/1
+
+###                                                                         
+
+### Criar jogador
+POST http://localhost:8080/jogadores
+Content-Type: application/json
+
+{
+    "nomeUsuario": "Emanoel",
+    "email": "emanoel@email.com",
+    "senha": "123456",
+    "nivel": 1,
+    "experiencia": 0,
+    "pontuacao": 0
+}
+
+###
+
+### Atualizar jogador
+PUT http://localhost:8080/jogadores/1
+Content-Type: application/json
+
+{
+    "nomeUsuario": "Emanoel Atualizado",
+    "email": "emanoel@email.com",
+    "senha": "123456",
+    "nivel": 2,
+    "experiencia": 150,
+    "pontuacao": 500
+}
+
+###
+
+### Remover jogador
+DELETE http://localhost:8080/jogadores/1
