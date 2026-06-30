@@ -1,4 +1,4 @@
-package com.pweb.game_view_api.Missao;
+package com.pweb.game_view_api.missao;
 
 import jakarta.persistence.*;
 import lombok.*;
