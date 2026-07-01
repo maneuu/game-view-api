@@ -34,3 +34,5 @@ build/
 
 
 requests.http
+
+.env
