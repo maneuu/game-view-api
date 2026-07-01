@@ -22,6 +22,12 @@ public class GuildaController {
         return this.service.all();
     }
 
+    @GetMapping("/get/jogador/{idJogador}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Guilda> byJogador(@PathVariable Long idJogador) {
+        return this.service.getByIdJogador(idJogador);
+    }
+
     @GetMapping("/get/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Guilda one(@PathVariable Long id) {

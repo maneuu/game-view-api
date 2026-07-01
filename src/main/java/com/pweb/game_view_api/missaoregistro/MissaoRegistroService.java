@@ -17,6 +17,14 @@ public class MissaoRegistroService {
         return this.repository.findAll();
     }
 
+    public List<MissaoRegistro> getByJogador(Long idJogador) {
+        return this.repository.findByJogador_IdJogador(idJogador);
+    }
+
+    public List<MissaoRegistro> getByMissao(Long idMissao) {
+        return this.repository.findByMissao_IdMissao(idMissao);
+    }
+
     public MissaoRegistro get(Long id) {
         return this.repository.findById(id).orElse(null);
     }

@@ -17,6 +17,14 @@ public class BatalhaRegistroService {
         return this.repository.findAll();
     }
 
+    public List<BatalhaRegistro> getByJogador(Long idJogador) {
+        return this.repository.findByJogador_IdJogador(idJogador);
+    }
+
+    public List<BatalhaRegistro> getByMonstro(Long idMonstro) {
+        return this.repository.findByMonstro_IdMonstro(idMonstro);
+    }
+
     public BatalhaRegistro get(Long id) {
         return this.repository.findById(id).orElse(null);
     }

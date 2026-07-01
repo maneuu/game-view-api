@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/batalha-registro")
+@RequestMapping("/batalharegistro")
 @CrossOrigin
 public class BatalhaRegistroController {
 
@@ -20,6 +20,18 @@ public class BatalhaRegistroController {
     @ResponseStatus(HttpStatus.OK)
     public List<BatalhaRegistro> all() {
         return this.service.all();
+    }
+
+    @GetMapping("/get/jogador/{idJogador}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<BatalhaRegistro> byJogador(@PathVariable Long idJogador) {
+        return this.service.getByJogador(idJogador);
+    }
+
+    @GetMapping("/get/monstro/{idMonstro}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<BatalhaRegistro> byMonstro(@PathVariable Long idMonstro) {
+        return this.service.getByMonstro(idMonstro);
     }
 
     @GetMapping("/get/{id}")

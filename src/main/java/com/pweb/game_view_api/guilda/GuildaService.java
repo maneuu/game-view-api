@@ -17,6 +17,10 @@ public class GuildaService {
         return this.repository.findAll();
     }
 
+    public List<Guilda> getByIdJogador(Long idJogador) {
+        return this.repository.findByJogador_IdJogador(idJogador);
+    }
+
     public Guilda get(Long id) {
         return this.repository.findById(id).orElse(null);
     }
