@@ -17,6 +17,14 @@ public class JogadorService {
         return this.repository.findAll();
     }
 
+    public List<Jogador> top10ByPontuacao() {
+        return this.repository.findTop10ByOrderByPontuacaoDesc();
+    }
+
+    public List<Jogador> getByNomeUsuario(String nomeUsuario) {
+        return this.repository.findByNomeUsuario(nomeUsuario);
+    }
+
     public Jogador get(Long id) {
         return this.repository.findById(id).orElse(null);
     }

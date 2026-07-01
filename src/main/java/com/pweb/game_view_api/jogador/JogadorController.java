@@ -22,6 +22,18 @@ public class JogadorController {
         return this.service.all();
     }
 
+    @GetMapping("/top10")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Jogador> top10() {
+        return this.service.top10ByPontuacao();
+    }
+
+    @GetMapping("/get/nome/{nomeUsuario}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Jogador> byNomeUsuario(@PathVariable String nomeUsuario) {
+        return this.service.getByNomeUsuario(nomeUsuario);
+    }
+
     @GetMapping("/get/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Jogador one(@PathVariable Long id) {
