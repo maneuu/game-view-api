@@ -22,6 +22,12 @@ public class PersonagemController {
         return this.service.all();
     }
 
+    @GetMapping("/get/jogador/{idJogador}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Personagem> byJogador(@PathVariable Long idJogador) {
+        return this.service.getByIdJogador(idJogador);
+    }
+
     @GetMapping("/get/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Personagem one(@PathVariable Long id) {

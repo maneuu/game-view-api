@@ -17,6 +17,10 @@ public class AliadoService {
         return this.repository.findAll();
     }
 
+    public List<Aliado> getByIdJogador(Long idJogador) {
+        return this.repository.findByJogador_IdJogador(idJogador);
+    }
+
     public Aliado get(Long id) {
         return this.repository.findById(id).orElse(null);
     }

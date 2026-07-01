@@ -17,6 +17,10 @@ public class PersonagemService {
         return this.repository.findAll();
     }
 
+    public List<Personagem> getByIdJogador(Long idJogador) {
+        return this.repository.findByJogador_IdJogador(idJogador);
+    }
+
     public Personagem get(Long id) {
         return this.repository.findById(id).orElse(null);
     }

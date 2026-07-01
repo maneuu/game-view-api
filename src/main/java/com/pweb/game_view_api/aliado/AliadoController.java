@@ -22,6 +22,12 @@ public class AliadoController {
         return this.service.all();
     }
 
+    @GetMapping("/get/jogador/{idJogador}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Aliado> byJogador(@PathVariable Long idJogador) {
+        return this.service.getByIdJogador(idJogador);
+    }
+
     @GetMapping("/get/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Aliado one(@PathVariable Long id) {
